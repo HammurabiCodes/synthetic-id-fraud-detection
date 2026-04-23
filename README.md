@@ -17,7 +17,7 @@ Synthetic identity fraud is one of the fastest-growing challenges in consumer le
 
 ### Dashboard Preview
 
-![Dashboard screenshot placeholder](notebooks/dashboard_screenshot_placeholder.png)
+![Dashboard Preview](notebooks/dashboard_preview.png)
 
 > Screenshot placeholder: add a dashboard screenshot here after launching the Streamlit app.
 
