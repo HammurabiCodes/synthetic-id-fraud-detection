@@ -178,6 +178,15 @@ notebooks/shap_beeswarm.png
 notebooks/shap_single_case.png
 ```
 
+### SHAP Feature Importance
+![SHAP Summary](notebooks/shap_summary.png)
+
+### SHAP Feature Impact Direction  
+![SHAP Beeswarm](notebooks/shap_beeswarm.png)
+
+### SHAP Single Case Explanation
+![SHAP Single Case](notebooks/shap_single_case.png)
+
 ### Step 7: Run the Streamlit dashboard
 
 ```bash
