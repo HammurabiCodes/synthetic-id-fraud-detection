@@ -3,7 +3,9 @@ from __future__ import annotations
 from pathlib import Path
 
 import joblib
+import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
 from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score
 from sklearn.model_selection import train_test_split
 from xgboost import XGBClassifier
@@ -11,6 +13,7 @@ from xgboost import XGBClassifier
 
 DATA_PATH = Path("data/raw/loan_applications.csv")
 MODEL_PATH = Path("models/fraud_detector.pkl")
+CONFUSION_MATRIX_PATH = Path("notebooks/confusion_matrix.png")
 RANDOM_STATE = 42
 
 
@@ -84,12 +87,26 @@ def evaluate_model(
     # threshold-based accuracy metrics as well as ranking quality via ROC-AUC.
     y_pred = model.predict(X_test)
     y_proba = model.predict_proba(X_test)[:, 1]
+    cm = confusion_matrix(y_test, y_pred)
 
     print("\nClassification Report:")
     print(classification_report(y_test, y_pred))
 
     print("Confusion Matrix:")
-    print(confusion_matrix(y_test, y_pred))
+    print(cm)
+
+    # Save a labeled heatmap so model performance can be reviewed visually
+    # alongside the printed classification metrics.
+    CONFUSION_MATRIX_PATH.parent.mkdir(parents=True, exist_ok=True)
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
+    plt.title("Confusion Matrix — Synthetic Identity Fraud Detection")
+    plt.xlabel("Predicted Class")
+    plt.ylabel("Actual Class")
+    plt.tight_layout()
+    plt.savefig(CONFUSION_MATRIX_PATH, dpi=150)
+    plt.close()
+    print(f"Confusion matrix saved to {CONFUSION_MATRIX_PATH}")
 
     print(f"ROC-AUC Score: {roc_auc_score(y_test, y_proba):.4f}")
 
