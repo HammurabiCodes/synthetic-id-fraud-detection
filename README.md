@@ -17,7 +17,7 @@ Synthetic identity fraud is one of the fastest-growing challenges in consumer le
 
 ### Demo Screenshot
 
-![Dashboard Preview](notebooks/dashboard_preview.png)
+![Dashboard Preview](https://raw.githubusercontent.com/HammurabiCodes/synthetic-id-fraud-detection/main/notebooks/dashboard_preview.png)
 
 ### Run Locally
 
