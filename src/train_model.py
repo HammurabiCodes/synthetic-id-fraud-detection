@@ -99,7 +99,14 @@ def evaluate_model(
     # alongside the printed classification metrics.
     CONFUSION_MATRIX_PATH.parent.mkdir(parents=True, exist_ok=True)
     plt.figure(figsize=(8, 6))
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
+    sns.heatmap(
+        cm,
+        annot=True,
+        fmt="d",
+        cmap="Blues",
+        xticklabels=["Legit", "Fraud"],
+        yticklabels=["Legit", "Fraud"],
+    )
     plt.title("Confusion Matrix — Synthetic Identity Fraud Detection")
     plt.xlabel("Predicted Class")
     plt.ylabel("Actual Class")
