@@ -1,6 +1,8 @@
 # 🛡️ Synthetic Identity Fraud Detection System
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white) ![XGBoost](https://img.shields.io/badge/XGBoost-ML_Model-FF6600?style=for-the-badge) ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white) ![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge) [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://synthetic-id-fraud-detection.streamlit.app)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white) ![XGBoost](https://img.shields.io/badge/XGBoost-ML_Model-FF6600?style=for-the-badge) ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white) ![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://synthetic-id-fraud-detection.streamlit.app)
 
 ## 1. 🏷️ Project Title & Badges
 
@@ -17,7 +19,11 @@ Synthetic identity fraud is one of the fastest-growing challenges in consumer le
 ![Dashboard Preview](https://raw.githubusercontent.com/HammurabiCodes/synthetic-id-fraud-detection/main/notebooks/dashboard_preview.png)
 
 ## 🌐 Live Demo
-👉 [Launch App](https://synthetic-id-fraud-detection.streamlit.app)
+### 🌐 [👉 CLICK HERE TO LAUNCH LIVE APP](https://synthetic-id-fraud-detection.streamlit.app)
+
+> **Live fraud risk scoring dashboard** — Enter any loan 
+> application details and get an instant AI-powered 
+> fraud probability score with SHAP explanations.
 
 ```bash
 streamlit run app/dashboard.py
