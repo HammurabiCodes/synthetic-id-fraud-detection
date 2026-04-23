@@ -58,13 +58,24 @@ synthetic-id-fraud-detection/
 
 ## 5. 📊 Key Results
 
+![Confusion Matrix](notebooks/confusion_matrix.png)
+
 | Metric | Result |
-| --- | ---: |
+|---|---:|
 | Model Accuracy | 92% |
 | ROC-AUC | 0.8776 |
-| Precision (fraud) | 98% |
-| Recall (fraud) | 76% |
+| Precision (fraud class) | 98.6% |
+| Recall (fraud class) | 76.4% |
+| Fraud cases caught | 485 out of 635 |
+| False alarms | 7 out of 1,365 legit apps |
 | Training data | 10,000 synthetic applications |
+
+> **Note:** Class imbalance in the synthetic dataset 
+> (76% legit vs 24% fraud) means ROC-AUC of 0.8776 
+> is the most reliable performance indicator. 
+> The model flags fraud with 98.6% precision — 
+> meaning near-zero false alarms for legitimate 
+> applicants — while catching 76% of real fraud cases.
 
 ## 6. 🚩 Fraud Signals Detected
 
