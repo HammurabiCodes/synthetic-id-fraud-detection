@@ -56,6 +56,16 @@ synthetic-id-fraud-detection/
 └── README.md                         # Project documentation
 ```
 
+## 4b. 📓 Notebooks
+
+| Notebook | Description |
+|---|---|
+| [01_EDA.ipynb](notebooks/01_EDA.ipynb) | Exploratory data analysis — fraud patterns, feature distributions, and correlation analysis across 10,000 synthetic loan applications |
+
+> Open this notebook to see the full data exploration 
+> process behind the model — including how fraud signals 
+> were identified before a single line of ML code was written.
+
 ## 5. 📊 Key Results
 
 ![Confusion Matrix](notebooks/confusion_matrix.png)
